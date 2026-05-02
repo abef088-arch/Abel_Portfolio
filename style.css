@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-/* style.css - Modular and Responsive Styles */
-
-/* Color Palette */
+*/
 :root {
   --primary-color: #1e3a8a; /* Deep Blue */
   --secondary-color: #64748b; /* Slate Gray */
@@ -226,7 +223,7 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-=======
+
 /* style.css - Modular and Responsive Styles */
 
 /* Color Palette */
@@ -544,4 +541,4 @@ footer {
     width: 100%;
   }
 }
->>>>>>> 28bb132 (Fix: Updated footer social links)
+

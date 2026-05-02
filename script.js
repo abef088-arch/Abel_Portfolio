@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // script.js - Modular JavaScript
 
 // Load navigation
@@ -15,7 +15,7 @@ fetch('footer.html')
   .then(data => {
     document.getElementById('footer').innerHTML = data;
   })
-=======
+
 // script.js - Modular JavaScript
 
 // Load navigation
@@ -32,5 +32,5 @@ fetch('footer.html')
   .then(data => {
     document.getElementById('footer').innerHTML = data;
   })
->>>>>>> 28bb132 (Fix: Updated footer social links)
+
   .catch(error => console.error('Error loading footer:', error));
