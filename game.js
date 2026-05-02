@@ -4,9 +4,10 @@ const scoreDisplay = document.querySelector('.score-display');
 const startRestartButton = document.getElementById('startRestartButton');
 
 const groundY = canvas.height - 30;
-const gravity = 0.8;
+const gravity = 0.45;
 const obstacleSpawnInterval = 1500;
-const obstacleSpeed = 6;
+const baseObstacleSpeed = 3; // Reduced from 6 (50% reduction)
+const accelerationFactor = 0.0003; // Gentle acceleration per point
 const accentColor = '#3b82f6';
 
 const dino = {
@@ -14,7 +15,7 @@ const dino = {
   y: groundY - 50,
   width: 50,
   height: 50,
-  jumpVelocity: 15,
+  jumpVelocity: 11,
   velocityY: 0,
   isJumping: false,
 };
@@ -54,12 +55,13 @@ function endGame() {
 
 function spawnObstacle() {
   const height = 40 + Math.random() * 20;
+  const currentSpeed = baseObstacleSpeed + (score * accelerationFactor);
   obstacles.push({
     x: canvas.width + 20,
     y: groundY - height,
     width: 20,
     height: height,
-    speed: obstacleSpeed,
+    speed: currentSpeed,
   });
 }
 
